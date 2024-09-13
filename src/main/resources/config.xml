@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean name="address" class="com.autowiring.Address" p:hno="2325" p:street="7492-Street"
+          p:city="Bengaluru"/>
+
+    <!--    <bean name="emp" class="com.autowiring.Employee" autowire="byType"/>-->
+    <!--    <bean name="emp" class="com.autowiring.Employee" autowire="byName"/>-->
+    <bean name="emp" class="com.autowiring.Employee" autowire="constructor"/>
+
+
+</beans>
